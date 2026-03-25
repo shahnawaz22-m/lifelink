@@ -21,11 +21,13 @@ jobs:
 
       - name: Build Backend Image
         run: |
-          docker build -t 7702473707/lifelink-backend:latest ./backend
+          cd backend
+          docker build -t 7702473707/lifelink-backend:latest .
 
       - name: Build Frontend Image
         run: |
-          docker build -t 7702473707/lifelink-frontend:latest ./frontend
+          cd frontend
+          docker build -t 7702473707/lifelink-frontend:latest .
 
       - name: Push Backend Image
         run: |
